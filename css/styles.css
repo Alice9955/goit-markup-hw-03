@@ -1,0 +1,395 @@
+
+
+
+:root { 
+--action-primary-colour: #2196F3;
+
+--primary-dark-text-color: #757575;
+--secondery-dark-text-color: #212121;
+--primary-white-color: #FFFFFF;
+--secondery-color: rgba(255, 255, 255, 0.6);
+--background-color: #2F303A;
+--button-background-color: #F5F4FA;
+}
+
+
+/* <body class="page"> */
+.page {
+
+    background-color: var(--primary-white-color);
+    color: var(--primary-dark-text-color);
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+    
+}
+
+/* logo */
+.logo {
+    color: #000000;
+    font-family: Raleway, sans-serif;
+ /* font-style: normal; Прибираємо бо за замовчуванням стоїть це значення;
+    прибираємо ці значення щоб не перенавантажувати зайвими властивостями.
+    Задає накреслення тексту - font-style: normal;  */
+    font-weight: 700;
+/* За замовчуванням вага шрифту абзаців (посилання),
+    який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700.
+    Залишаємо це значення font-weight: 700 */
+    font-size: 26px;
+    line-height: 1.19;
+/* line-height (31 px) / font-size (26px) = 1.19 
+    Скруглили значення і залишили 2 цифри після коми. */
+    text-decoration: none;
+}
+
+/* 
+.logo:hover,
+.logo:focus {
+    color: var(--action-primary-colour);
+}
+ */
+
+.logo-style {
+    color: var(--action-primary-colour);
+}
+
+.style-reset {
+    list-style: none;
+}
+
+/* section "Hero"  */
+.hero {
+    background-color: var(--background-color);
+    
+}
+
+.hero-title {
+    color: var(--primary-white-color);
+/* font-family: 'Roboto';  Прибиаємо цю властивість, вона від <body class="page"> успадкована */
+/* font-style: normal; Прибиаємо цю властивість, вона за замовчуванням стоїть */
+    font-weight: 900;
+/* Залишаємо font-weight: 900; Бо за замовчуванням вага шрифту абзаців, який встановлений в таблиці стилів браузера,
+    дорівнює 400, а вага заголовків - 700. */
+    font-size: 44px;
+    line-height: 1.36;
+/* line-height (60 px) / font-size (44px) = 1.36 
+    Скруглили значення і залишили 2 цифри після коми. */
+    text-align: center;
+    letter-spacing: 0.06em; 
+    text-transform: uppercase;
+}
+
+.button.primary {
+    color: var(--primary-white-color);
+    background-color: var(--action-primary-colour);
+    border: none;
+    font-family: inherit;
+/* Якщо в тег body або клас присвоєний цьому тегу прописати сімейство шрифтів,
+    то все тіло документа успадкує цей шрифт крім кнопок. Тому кнопці задаємо 
+    значення font-family: inherit;  */
+    font-weight: 700;
+/* Залишаємо font-weight: 700; Бо за замовчуванням вага шрифту абзаців, який встановлений в таблиці стилів браузера,
+    дорівнює 400, а вага заголовків - 700. */
+    font-size: 16px;
+    line-height: 1.88;
+/* line-height (30 px) / font-size (16px) = 1.875
+    Скруглили значення і залишили 2 цифри після коми. */
+
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    
+}
+
+
+
+/* Site nav*/
+
+.site-nav .nav-link {
+    color: var(--secondery-dark-text-color);
+/* font-family: Roboto, sans-serif; Прибираємо цю властивість, бо вона успадкована від <body class="page">  */
+/* font-style: normal; значення за замовченням - прибираємо цю властивість, щоб не перевантажувати. */
+    font-weight: 500;
+/* За замовчуванням вага шрифту абзаців, який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. 
+    Залишаємо це значення.*/
+    font-size: 14px;
+/* За замовчуванням розмір шрифту абзаців, який встановлений в таблиці стилів браузера, дорівнює 16px. Тому залтшаємо це значення. */
+    line-height: 1.14;
+/* line-height (16 px) / font-size (14px) = 1.14 
+   Скруглили значення і залишили 2 цифри після коми. */
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+    color: var(--action-primary-colour);
+}
+
+.site-nav .nav-link.current {
+    color: var(--action-primary-colour);
+}
+
+
+.get-in-touch.primary {
+    color: var(--primary-dark-text-color);
+/* font-family: Roboto, sans-serif; Прибираємо цю властивість, бо вона успадкована від <body class="page">  */
+/* font-style: normal; значення за замовченням - прибираємо цю властивість, щоб не перевантажувати. */
+    font-weight: 500;
+/* За замовчуванням вага шрифту абзаців, який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. 
+    Залишаємо це значення.*/
+    font-size: 14px;
+/* За замовчуванням розмір шрифту абзаців, який встановлений в таблиці стилів браузера, дорівнює 16px. Тому залтшаємо це значення. */
+    line-height: 1.14;
+/* line-height (16 px) / font-size (14px) = 1.14 
+   Скруглили значення і залишили 2 цифри після коми. */
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.get-in-touch.primary:hover,
+.get-in-touch.primary:focus {
+    color: var(--action-primary-colour);
+}
+/* Site sections */
+
+.visually-hidden {
+    visibility: hidden;
+}
+
+
+
+/*
+1)  h2, h3 {
+    color: var(--secondery-dark-text-color);
+}
+ 2)
+
+.sections h2 {
+    color: var(--secondery-dark-text-color);
+}
+
+.lists h3 {
+    color: var(--secondery-dark-text-color);
+}
+*/
+
+.sections h2, h3 {
+    color: var(--secondery-dark-text-color);
+
+}
+
+.sections.features h3 {
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+/* font-weight: 700; Пибираємо, бо за замовчуванням вага шрифту абзаців,
+    який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 14px;
+    line-height: 1.14;
+/* (line-height: 16px) ділимо на (font-size: 14px)  = 1.14 ; Скруглили значення і залишили 2 цифри після коми. */ 
+/* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/ 
+    text-transform: uppercase;
+
+}
+
+.sections.features p {
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+/* font-weight: 400; Пибираємо, бо за замовчуванням вага шрифту абзаців,
+   який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 14px;
+    line-height: 1.71;
+/* line-height (24 px) / font-size (14 px) = 1.71 ; Скруглили значення і залишили 2 цифри після коми. */
+/* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
+}
+
+
+.sections > h2 {
+
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+/* font-weight: 700;  Пибираємо, бо за замовчуванням вага шрифту абзаців,
+   який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 36px;
+    line-height: 1.17;
+/* line-height (42 px) / font-size (36 px) = 1.16(6) ; Скруглили значення і залишили 2 цифри після коми. */
+    text-align: center;
+/* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
+
+}
+
+
+.sections.team  h3 {
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+    font-weight: 500;
+/* font-weight: 500;  Залишаємо, бо за замовчуванням вага шрифту абзаців,
+   який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 16px;
+    line-height: 1.19;
+/* line-height (19 px) / font-size (16 px) = 1.1875 ; Скруглили значення і залишили 2 цифри після коми. */
+    text-align: center;
+/* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
+}
+
+
+.sections.team p {
+
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+/* font-weight: 400;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
+   таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 16px;
+    line-height: 1.19;
+/* line-height (19 px) / font-size (16 px) = 1.1875 ; Скруглили значення і залишили 2 цифри після коми. */
+    text-align: center;
+/* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
+}
+
+    
+
+
+
+  
+
+
+
+
+/* Portfolio page */
+
+.portfolio-nav .portfolio-button {
+
+    color: var(--secondery-dark-text-color);
+    background-color: var(--button-background-color);
+    border: none;
+    font-family: inherit;
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+/* Якщо в тег body або клас присвоєний цьому тегу прописати сімейство шрифтів,
+    то все тіло документа успадкує цей шрифт крім кнопок. Тому кнопці задаємо 
+    значення font-family: inherit;  */
+    letter-spacing: 0.03em;
+/* letter-spacing: 0.03em Залишаємо це значення так як не наслідються кнопками властивості, 
+   що присвоєні body */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+/* line-height (26 px) / font-size (16 px) = 1.625 ; Скруглили значення і залишили 2 цифри після коми. */
+/* text-align: center; Прибираємо бо це кнопка и текст центровано всерединні кнопки*/
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.portfolio-nav .portfolio-button:hover,
+.portfolio-nav .portfolio-button:focus {
+
+    color: var(--primary-white-color);
+    background-color: var(--action-primary-colour);
+}
+
+.filter-titles h3 {
+    letter-spacing: 0.06em;
+}
+
+
+
+.filter-titles h3 {
+    
+
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+/* font-weight: 700;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
+   таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 18px;
+    line-height: 2;
+/* line-height (36 px) / font-size (18 px) = 2; Скруглили значення і залишили 2 цифри після коми. */
+    letter-spacing: 0.06em;
+    
+}
+
+
+
+.filter-titles p {
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+/* font-weight: 400;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
+   таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+   font-size: 16px;
+   line-height: 1.88;
+/* line-height (30 px) / font-size (16 px) =1.875 ; Скруглили значення і залишили 2 цифри після коми. */
+ /* letter-spacing: 0.03em Залишаємо це значення так як не наслідються кнопками властивості, що присвоєні body */
+}
+
+
+
+/* footer */
+
+.contact-info {
+    background-color: var(--background-color);
+}
+
+.logo-style-secondary {
+    color: var(--primary-white-color);
+
+}
+
+/* .logo-style-secondary:hover,
+.logo-style-secondary:focus  {
+    color: var(--action-primary-colour);
+} */
+
+
+.location {
+    color: var(--primary-white-color);
+    text-decoration: none;
+
+}
+
+.location:hover,
+.location:focus {
+    color: var(--action-primary-colour);
+}
+
+
+.get-in-touch {
+    color: var(--secondery-color);
+    text-decoration: none;
+}
+
+.get-in-touch:hover,
+.get-in-touch:focus {
+    color: var(--action-primary-colour);
+
+}
+
+.footer-address {
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+   font-style: normal; 
+/* Залишаємо , бо від <address> прийшло font-style: italic; Щоб змінити стиль, залишаємо font-style: normal;  */
+/* font-weight: 400;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
+    таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 14px;
+    line-height: 1.71;
+/* line-height (24 px) / font-size (14 px) = 1.71 ; Скруглили значення і залишили 2 цифри після коми. */
+/* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/  
+    
+}
+
+
+
+
+
+
+
