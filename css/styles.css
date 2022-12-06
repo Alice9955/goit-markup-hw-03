@@ -1,4 +1,4 @@
-
+﻿
 
 
 :root { 
@@ -54,15 +54,43 @@
 
 .style-reset {
     list-style: none;
+
+    padding: 0;
+    margin: 0;
+/* У списку від браузера є автоматичний лівий padding та верхні та 
+    нижні margine.
+    Є список, який прибирає оформлення списку. Тут же можна автоматично
+    для всіх списків у документі, у яких є цей клас,
+    скинути автоматичний margin і padding,
+    який йде від браузера за замовчуванням. */
 }
 
 /* section "Hero"  */
 .hero {
+    margin-bottom: 94px;
+ 
+
     background-color: var(--background-color);
-    
+    outline: 2px solid tomato;
+    text-align: center;
+/* Посилання це рядково-блоковий елемент, заголовок це блоковий елемент в якому є текст.
+   Їм можно задати властивість text-align: center; через всю секцію (батьківський елемент)
+   і тоді всі елементи відцентруються, бо ця властивість наслідується. */
 }
 
 .hero-title {
+    margin-top: 0;
+/* margin-bottom: 0; */
+/* У секції герой є заголовок у нього є автоматичні від браузера margin,
+    які пробивають секцію і між хедером і героєм утворюється зазор. 
+    Margin заголовка потрібно скинути.*/
+
+
+    outline: 2px solid tomato;
+    
+    margin-bottom: 30px;
+    /* Подивились на дизайн макету і змінили значення margin-bottom на те, що у макеті.*/
+
     color: var(--primary-white-color);
 /* font-family: 'Roboto';  Прибиаємо цю властивість, вона від <body class="page"> успадкована */
 /* font-style: normal; Прибиаємо цю властивість, вона за замовчуванням стоїть */
@@ -79,6 +107,22 @@
 }
 
 .button.primary {
+    border-radius: 4px;
+    padding: 10px 32px;
+    display: inline-block;
+    /* Посилання - це елемент рядковий. Inline. 
+    Вертикальний pudding візуально малюється, у геометрії не зображається
+    Щоб у геометрії заробили вертикальні pudding потрібно зробити display: inline-block; 
+    У рядково-блокового елемента працює вертикальні pudding*/
+    
+    min-width: 216px;
+/* width: 216px; Задали кнопці фіксовану ширину. 
+   Перший тест верстки - переповнення. Текст не поміщається на поточний рядок браузер переносить його на інший
+   Щоб кнопка була мінімального стандартного розміру ставимо мінімальну ширину.*/
+
+
+
+
     color: var(--primary-white-color);
     background-color: var(--action-primary-colour);
     border: none;
@@ -96,11 +140,27 @@
 
     letter-spacing: 0.06em;
     cursor: pointer;
+    text-align: center;
 
     
 }
 
+/* header */
 
+
+.container{
+            
+
+  width: 1200px;  
+/* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю)=1200px 
+   фінальний розмір контенера; */
+   padding-right: 15px;
+   padding-left: 15px;
+
+   margin-left: auto;
+   margin-right: auto;
+   outline: 2px solid tomato;
+}
 
 /* Site nav*/
 
@@ -113,7 +173,7 @@
     Залишаємо це значення.*/
     font-size: 14px;
 /* За замовчуванням розмір шрифту абзаців, який встановлений в таблиці стилів браузера, дорівнює 16px. Тому залтшаємо це значення. */
-    line-height: 1.14;
+    line-height: 1.14px;
 /* line-height (16 px) / font-size (14px) = 1.14 
    Скруглили значення і залишили 2 цифри після коми. */
     letter-spacing: 0.02em;
@@ -146,7 +206,7 @@
     Залишаємо це значення.*/
     font-size: 14px;
 /* За замовчуванням розмір шрифту абзаців, який встановлений в таблиці стилів браузера, дорівнює 16px. Тому залтшаємо це значення. */
-    line-height: 1.14;
+    line-height: 1.14px;
 /* line-height (16 px) / font-size (14px) = 1.14 
    Скруглили значення і залишили 2 цифри після коми. */
     letter-spacing: 0.02em;
@@ -164,6 +224,8 @@
 }
 
 
+
+/* Стилі секцій */
 
 /*
 1)  h2, h3 {
@@ -185,13 +247,27 @@
 
 }
 
+.features-title {
+   
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+
+  
+
 .sections.features h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    
+ 
+
+
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
 /* font-weight: 700; Пибираємо, бо за замовчуванням вага шрифту абзаців,
     який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.14px;
 /* (line-height: 16px) ділимо на (font-size: 14px)  = 1.14 ; Скруглили значення і залишили 2 цифри після коми. */ 
 /* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/ 
     text-transform: uppercase;
@@ -199,12 +275,16 @@
 }
 
 .sections.features p {
+
+    margin-top: 0;
+    margin-bottom: 94px;
+
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
 /* font-weight: 400; Пибираємо, бо за замовчуванням вага шрифту абзаців,
    який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
     font-size: 14px;
-    line-height: 1.71;
+    line-height: 1.71px;
 /* line-height (24 px) / font-size (14 px) = 1.71 ; Скруглили значення і залишили 2 цифри після коми. */
 /* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
 }
@@ -212,12 +292,12 @@
 
 .sections > h2 {
 
-/* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body */
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
 /* font-weight: 700;  Пибираємо, бо за замовчуванням вага шрифту абзаців,
    який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
     font-size: 36px;
-    line-height: 1.17;
+    line-height: 1.17px;
 /* line-height (42 px) / font-size (36 px) = 1.16(6) ; Скруглили значення і залишили 2 цифри після коми. */
     text-align: center;
 /* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
@@ -232,7 +312,7 @@
 /* font-weight: 500;  Залишаємо, бо за замовчуванням вага шрифту абзаців,
    який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.19px;
 /* line-height (19 px) / font-size (16 px) = 1.1875 ; Скруглили значення і залишили 2 цифри після коми. */
     text-align: center;
 /* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
@@ -246,7 +326,7 @@
 /* font-weight: 400;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
    таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.19px;
 /* line-height (19 px) / font-size (16 px) = 1.1875 ; Скруглили значення і залишили 2 цифри після коми. */
     text-align: center;
 /* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
@@ -264,6 +344,13 @@
 /* Portfolio page */
 
 .portfolio-nav .portfolio-button {
+    border-radius: 4px;
+    display: inline-block;
+        /* Посилання - це елемент рядковий. Inline. 
+        Вертикальний pudding візуально малюється, у геометрії не зображається
+        Щоб у геометрії заробили вертикальні pudding потрібно зробити display: inline-block; 
+        У рядково-блокового елемента працює вертикальні pudding*/
+
 
     color: var(--secondery-dark-text-color);
     background-color: var(--button-background-color);
@@ -278,10 +365,11 @@
    що присвоєні body */
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.62;
+    line-height: 1.62px;
 /* line-height (26 px) / font-size (16 px) = 1.625 ; Скруглили значення і залишили 2 цифри після коми. */
-/* text-align: center; Прибираємо бо це кнопка и текст центровано всерединні кнопки*/
+    text-align: center; 
     cursor: pointer;
+
 }
 
 
@@ -313,7 +401,7 @@
 /* font-weight: 700;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
    таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
     font-size: 18px;
-    line-height: 2;
+    line-height: 2px;
 /* line-height (36 px) / font-size (18 px) = 2; Скруглили значення і залишили 2 цифри після коми. */
     letter-spacing: 0.06em;
     
@@ -327,7 +415,7 @@
 /* font-weight: 400;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
    таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
    font-size: 16px;
-   line-height: 1.88;
+   line-height: 1.88px;
 /* line-height (30 px) / font-size (16 px) =1.875 ; Скруглили значення і залишили 2 цифри після коми. */
  /* letter-spacing: 0.03em Залишаємо це значення так як не наслідються кнопками властивості, що присвоєні body */
 }
@@ -381,7 +469,7 @@
 /* font-weight: 400;   Прибираємо, бо за замовчуванням вага шрифту абзаців, який встановлений в 
     таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
     font-size: 14px;
-    line-height: 1.71;
+    line-height: 1.71px;
 /* line-height (24 px) / font-size (14 px) = 1.71 ; Скруглили значення і залишили 2 цифри після коми. */
 /* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/  
     
