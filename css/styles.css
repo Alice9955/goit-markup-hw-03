@@ -55,8 +55,8 @@
 .style-reset {
     list-style: none;
 
-    padding: 0;
-    margin: 0;
+    padding: 0; 
+     margin: 0;
 /* У списку від браузера є автоматичний лівий padding та верхні та 
     нижні margine.
     Є список, який прибирає оформлення списку. Тут же можна автоматично
@@ -67,7 +67,7 @@
 
 /* section "Hero"  */
 .hero {
-    margin-bottom: 94px;
+  
  
 
     background-color: var(--background-color);
@@ -119,8 +119,8 @@
 /* width: 216px; Задали кнопці фіксовану ширину. 
    Перший тест верстки - переповнення. Текст не поміщається на поточний рядок браузер переносить його на інший
    Щоб кнопка була мінімального стандартного розміру ставимо мінімальну ширину.*/
-
-
+    
+    margin-bottom: 200px;
 
 
     color: var(--primary-white-color);
@@ -144,18 +144,23 @@
 
     
 }
-
+.hero.sections {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
 /* header */
 
 
 .container{
             
-
+ 
   width: 1200px;  
 /* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю)=1200px 
    фінальний розмір контенера; */
    padding-right: 15px;
    padding-left: 15px;
+/* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю це padding лівий та павий)=1200px 
+   фінальний розмір контенера; */
 
    margin-left: auto;
    margin-right: auto;
@@ -247,14 +252,26 @@
 
 }
 
-.features-title {
+.sections {
+margin-bottom: 94px;
+}
+
+
+.sections.team:last-child {
+    margin-bottom: 0;
+}
+
+.visually-hidden {
    
     margin-top: 0;
     margin-bottom: 0;
 } 
 
   
-
+.sections.features {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .sections.features h3 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -277,7 +294,7 @@
 .sections.features p {
 
     margin-top: 0;
-    margin-bottom: 94px;
+    
 
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
@@ -290,7 +307,17 @@
 }
 
 
-.sections > h2 {
+
+.sections.our-work {
+    padding-bottom: 0;
+
+}
+
+.sections.our-work  h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    
+
 
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body */
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
@@ -304,8 +331,31 @@
 
 }
 
+.sections.team {
+    padding: 94px 215px;
+
+}
+
+
+.sections.team h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding-top: 94px;
+/* font-family: 'Roboto'; Прибираємо, бо успадковано від body */
+    /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
+    /* font-weight: 700;  Пибираємо, бо за замовчуванням вага шрифту абзаців,
+   який встановлений в таблиці стилів браузера, дорівнює 400, а вага заголовків - 700. */
+    font-size: 36px;
+    line-height: 1.17px;
+    /* line-height (42 px) / font-size (36 px) = 1.16(6) ; Скруглили значення і залишили 2 цифри після коми. */
+    text-align: center;
+/* letter-spacing: 0.03em; Прибираємо, бо успадковано від body*/
+}
 
 .sections.team  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+   
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
     font-weight: 500;
@@ -320,6 +370,8 @@
 
 
 .sections.team p {
+    margin-top: 0;
+    margin-bottom: 30px;
 
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
@@ -343,13 +395,19 @@
 
 /* Portfolio page */
 
+.portfolio-nav {
+    margin-bottom: 34px;
+}
+
 .portfolio-nav .portfolio-button {
     border-radius: 4px;
     display: inline-block;
-        /* Посилання - це елемент рядковий. Inline. 
-        Вертикальний pudding візуально малюється, у геометрії не зображається
-        Щоб у геометрії заробили вертикальні pudding потрібно зробити display: inline-block; 
-        У рядково-блокового елемента працює вертикальні pudding*/
+/* Посилання - це елемент рядковий. Inline. 
+    Вертикальний pudding візуально малюється, у геометрії не зображається
+    Щоб у геометрії заробили вертикальні pudding потрібно зробити display: inline-block; 
+    У рядково-блокового елемента працює вертикальні pudding*/
+    padding: 6px 22px;
+
 
 
     color: var(--secondery-dark-text-color);
@@ -375,13 +433,23 @@
 
 
 
+.filter-titles img {
+    margin-bottom: 20px;
+}
 
+.filter-titles h3 {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
 
-
-
+.filter-titles p{
+    margin-bottom: 20px;
+}
 
 .portfolio-nav .portfolio-button:hover,
 .portfolio-nav .portfolio-button:focus {
+
+    padding: 6px 25px;
 
     color: var(--primary-white-color);
     background-color: var(--action-primary-colour);
@@ -425,7 +493,12 @@
 /* footer */
 
 .contact-info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
     background-color: var(--background-color);
+
 }
 
 .logo-style-secondary {
@@ -437,6 +510,7 @@
 .logo-style-secondary:focus  {
     color: var(--action-primary-colour);
 } */
+
 
 
 .location {
@@ -475,9 +549,17 @@
     
 }
 
+.logo.footer {
 
+    margin-bottom: 20px;
+}
 
+.footer-address li {
+    margin-bottom: 9px;
+}
 
-
+.footer-address li:last-child {
+    margin-bottom: 0;
+}
 
 
