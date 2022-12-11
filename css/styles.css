@@ -23,6 +23,26 @@
     
 }
 
+
+/* глобально скинути відступи 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+
+}
+*/
+
 /* logo */
 .logo {
     color: #000000;
@@ -53,10 +73,10 @@
 }
 
 .style-reset {
-    list-style: none;
+    list-style-type: none;
 
     padding: 0; 
-     margin: 0;
+    margin: 0;
 /* У списку від браузера є автоматичний лівий padding та верхні та 
     нижні margine.
     Є список, який прибирає оформлення списку. Тут же можна автоматично
@@ -67,6 +87,7 @@
 
 /* section "Hero"  */
 .hero {
+    padding: 200px 692px;
   
  
 
@@ -144,14 +165,14 @@
 
     
 }
-.hero.sections {
-    padding-top: 200px;
-    padding-bottom: 200px;
-}
+
+
 /* header */
 
 
 .container{
+
+   
             
  
   width: 1200px;  
@@ -161,15 +182,20 @@
    padding-left: 15px;
 /* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю це padding лівий та павий)=1200px 
    фінальний розмір контенера; */
+   /* padding: 0 15px; */
 
    margin-left: auto;
    margin-right: auto;
+   /* margin: 0 auto; */
    outline: 2px solid tomato;
 }
 
 /* Site nav*/
 
+
+
 .site-nav .nav-link {
+ 
     color: var(--secondery-dark-text-color);
 /* font-family: Roboto, sans-serif; Прибираємо цю властивість, бо вона успадкована від <body class="page">  */
 /* font-style: normal; значення за замовченням - прибираємо цю властивість, щоб не перевантажувати. */
@@ -253,11 +279,12 @@
 }
 
 .sections {
-margin-bottom: 94px;
+padding: 94px 215px;
 }
 
 
-.sections.team:last-child {
+.sections.team:last-child,
+.sections.filter-titles:last-child {
     margin-bottom: 0;
 }
 
@@ -268,10 +295,8 @@ margin-bottom: 94px;
 } 
 
   
-.sections.features {
-    padding-top: 0;
-    padding-bottom: 0;
-}
+
+
 .sections.features h3 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -331,10 +356,7 @@ margin-bottom: 94px;
 
 }
 
-.sections.team {
-    padding: 94px 215px;
 
-}
 
 
 .sections.team h2 {
@@ -443,6 +465,7 @@ margin-bottom: 94px;
 }
 
 .filter-titles p{
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -493,10 +516,8 @@ margin-bottom: 94px;
 /* footer */
 
 .contact-info {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-
+    padding: 60px 215px;
+  
     background-color: var(--background-color);
 
 }
@@ -507,9 +528,10 @@ margin-bottom: 94px;
 }
 
 /* .logo-style-secondary:hover,
-.logo-style-secondary:focus  {
+    .logo-style-secondary:focus  {
     color: var(--action-primary-colour);
-} */
+} 
+*/
 
 
 
