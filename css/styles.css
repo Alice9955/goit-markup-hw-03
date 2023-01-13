@@ -39,9 +39,54 @@ h5,
 h6,
 p {
     margin-top: 0;
-
 }
+
+ button {
+    cursor: pointer;
+}
+
+ list {
+    list-style: none;
+ }
 */
+
+img {
+    display: block;
+}
+
+.style-reset {
+    list-style-type: none;
+
+    padding: 0;
+    margin: 0;
+    /* У списку від браузера є автоматичний лівий padding та верхні та 
+    нижні margine.
+    Є список, який прибирає оформлення списку. Тут же можна автоматично
+    для всіх списків у документі, у яких є цей клас,
+    скинути автоматичний margin і padding,
+    який йде від браузера за замовчуванням. */
+}
+
+
+
+.container {
+
+
+    width: 1200px;
+    /* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю)=1200px 
+   фінальний розмір контейнера; */
+    padding-right: 15px;
+    padding-left: 15px;
+    /* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю це padding лівий та павий)=1200px 
+   фінальний розмір контенера; */
+    /* padding: 0 15px; */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0 auto; */
+    outline: 2px solid tomato;
+}
+
 
 /* logo */
 .logo {
@@ -72,18 +117,7 @@ p {
     color: var(--action-primary-colour);
 }
 
-.style-reset {
-    list-style-type: none;
 
-    padding: 0; 
-    margin: 0;
-/* У списку від браузера є автоматичний лівий padding та верхні та 
-    нижні margine.
-    Є список, який прибирає оформлення списку. Тут же можна автоматично
-    для всіх списків у документі, у яких є цей клас,
-    скинути автоматичний margin і padding,
-    який йде від браузера за замовчуванням. */
-}
 
 /* section "Hero"  */
 .hero {
@@ -141,7 +175,7 @@ p {
    Перший тест верстки - переповнення. Текст не поміщається на поточний рядок браузер переносить його на інший
    Щоб кнопка була мінімального стандартного розміру ставимо мінімальну ширину.*/
     
-    margin-bottom: 200px;
+    
 
 
     color: var(--primary-white-color);
@@ -170,25 +204,6 @@ p {
 /* header */
 
 
-.container{
-
-   
-            
- 
-  width: 1200px;  
-/* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю)=1200px 
-   фінальний розмір контенера; */
-   padding-right: 15px;
-   padding-left: 15px;
-/* width: 1170px по сітці + 30px гаттер (по 15px з кожного краю це padding лівий та павий)=1200px 
-   фінальний розмір контенера; */
-   /* padding: 0 15px; */
-
-   margin-left: auto;
-   margin-right: auto;
-   /* margin: 0 auto; */
-   outline: 2px solid tomato;
-}
 
 /* Site nav*/
 
@@ -280,8 +295,9 @@ p {
 
 }
 
-.sections {
-padding: 94px 215px;
+.sections.features {
+padding-top: 94px;
+padding-bottom: 94px;
 }
 
 
@@ -290,17 +306,10 @@ padding: 94px 215px;
     margin-bottom: 0;
 }
 
-.visually-hidden {
-   
-    margin-top: 0;
-    margin-bottom: 0;
-} 
-
-  
 
 
 .sections.features h3 {
-    margin-top: 0;
+    
     margin-bottom: 10px;
     
  
@@ -320,7 +329,7 @@ padding: 94px 215px;
 
 .sections.features p {
 
-    margin-top: 0;
+
     
 
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
@@ -334,9 +343,8 @@ padding: 94px 215px;
 }
 
 
-
 .sections.our-work {
-    padding-bottom: 0;
+    padding-bottom: 94px;
 
 }
 
@@ -360,11 +368,16 @@ padding: 94px 215px;
 
 
 
+.sections.team  {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 
 .sections.team h2 {
     margin-top: 0;
     margin-bottom: 50px;
-    padding-top: 94px;
+   
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body */
     /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
     /* font-weight: 700;  Пибираємо, бо за замовчуванням вага шрифту абзаців,
@@ -394,7 +407,7 @@ padding: 94px 215px;
 
 
 .sections.team p {
-    margin-top: 0;
+     
     margin-bottom: 30px;
 
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
@@ -409,7 +422,10 @@ padding: 94px 215px;
 }
 
     
-
+.team-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
 
   
@@ -418,6 +434,12 @@ padding: 94px 215px;
 
 
 /* Portfolio page */
+
+.sections.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+}
 
 .portfolio-nav {
     margin-bottom: 34px;
@@ -508,7 +530,9 @@ padding: 94px 215px;
 /* footer */
 
 .contact-info {
-    padding: 60px 215px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+     
   
     background-color: var(--background-color);
 
@@ -573,7 +597,7 @@ padding: 94px 215px;
 }
 
 .footer-address li:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0; 
 }
 
 
