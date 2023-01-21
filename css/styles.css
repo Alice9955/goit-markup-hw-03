@@ -268,7 +268,20 @@ img {
 /* Site sections */
 
 .visually-hidden {
-    visibility: hidden;
+    
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+    
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        
+
 }
 
 
@@ -408,7 +421,7 @@ padding-bottom: 94px;
 
 .sections.team p {
      
-    margin-bottom: 30px;
+    
 
 /* font-family: 'Roboto'; Прибираємо, бо успадковано від body*/
 /* font-style: normal;  Прибираємо, бо стоїть за замовчуванням*/
@@ -492,9 +505,6 @@ padding-bottom: 94px;
     background-color: var(--action-primary-colour);
 }
 
-.filter-titles h3 {
-    letter-spacing: 0.06em;
-}
 
 
 
@@ -509,6 +519,7 @@ padding-bottom: 94px;
     line-height: 2px;
 /* line-height (36 px) / font-size (18 px) = 2; Скруглили значення і залишили 2 цифри після коми. */
     letter-spacing: 0.06em;
+    margin-bottom: 4px;
     
 }
 
@@ -525,7 +536,9 @@ padding-bottom: 94px;
  /* letter-spacing: 0.03em Залишаємо це значення так як не наслідються кнопками властивості, що присвоєні body */
 }
 
-
+.filter-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+}
 
 /* footer */
 
